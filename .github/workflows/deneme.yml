@@ -12,10 +12,8 @@ jobs:
         - uses: actions/checkout@v2
         - name: Install dependiencies
           run: ls && sudo apt-get install git build-essential pkg-config libtool automake automake autopoint gettext && sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list && sudo apt-get update && sudo apt-get build-dep vlc
-        - name: Clone VLC
-          run: git clone git://git.videolan.org/vlc.git && cd vlc && ./bootstrap
         - name: Configure
-          run: ls && ls vlc/ && ./configure
+          run: ./bootstrap && ./configure
         - name: Build IT!
           run: make
         - name: Install
