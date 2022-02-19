@@ -2,10 +2,7 @@ name: Deneme
 
 
 on:
-    workflow_dispatch:
-        defaults:
-            run:
-                shell: bash
+    workflow_dispatch
 
 
 jobs:
