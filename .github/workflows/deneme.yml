@@ -15,7 +15,7 @@ jobs:
         - name: Clone VLC
           run: git clone https://github.com/bahadir200-cloud/vlc && cd vlc && ./bootstrap
         - name: Configure
-          run: ./Configure
+          run: ./configure
         - name: Build IT!
           run: make
         - name: Install
