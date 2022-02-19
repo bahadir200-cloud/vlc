@@ -11,7 +11,7 @@ jobs:
     steps:
         - uses: actions/checkout@v2
         - name: Install dependiencies
-          run: sudo apt-get install git build-essential pkg-config libtool automake automake autopoint gettext && apt-get build-dep vlc
+          run: sudo apt-get install git build-essential pkg-config libtool automake automake autopoint gettext && sudo apt-get build-dep vlc
         - name: Clone VLC
           run: git clone https://github.com/bahadir200-cloud/vlc && cd vlc && ./bootstrap
         - name: Configure
