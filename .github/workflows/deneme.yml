@@ -15,7 +15,7 @@ jobs:
         - name: Clone VLC
           run: git clone git://git.videolan.org/vlc.git && cd vlc && ./bootstrap
         - name: Configure
-          run: ./configure
+          run: ls && ./configure
         - name: Build IT!
           run: make
         - name: Install
