@@ -13,7 +13,7 @@ jobs:
         - name: Install dependiencies
           run: ls && sudo apt-get install git build-essential pkg-config libtool automake automake autopoint gettext && sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list && sudo apt-get update && sudo apt-get build-dep vlc
         - name: Configure
-          run: ./bootstrap && ./configure
+          run: ./bootstrap && ./configure --disable-xcb
         - name: Build IT!
           run: make
         - name: Install
